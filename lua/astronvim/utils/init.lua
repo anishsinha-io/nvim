@@ -185,6 +185,11 @@ function M.toggle_term_cmd(opts)
   terms[opts.cmd][num]:toggle()
 end
 
+local Terminal = require("toggleterm.terminal").Terminal
+local lazygit = Terminal:new { cmd = "lazygit", hidden = true, direction = "float" }
+
+function M.toggle_lazygit(opts) lazygit:toggle(opts) end
+
 --- Create a button entity to use with the alpha dashboard
 ---@param sc string The keybinding string to convert to a button
 ---@param txt string The explanation text of what the keybinding does
