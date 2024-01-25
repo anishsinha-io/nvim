@@ -45,6 +45,13 @@ return {
   { import = "astrocommunity.pack.astro" },
 
   --
+  -- diagnostics
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+
+  --
+  -- editing support
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  --
   -- ui
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.scrolling.vim-smoothie" },
