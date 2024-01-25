@@ -4,7 +4,7 @@ return {
     opts = {
       override = {
         toml = {
-          icon = "⚙",
+          icon = "",
         },
       },
     },

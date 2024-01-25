@@ -6,4 +6,11 @@ require "user.plugins.trouble"
 
 return {
   colorscheme = "catppuccin-mocha",
+
+  mappings = {
+    n = {
+      ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find todo comments" },
+      -- ["<leader>o"] = {"<cmd>"}
+    },
+  },
 }

@@ -43,4 +43,21 @@ return {
   { import = "astrocommunity.pack.angular" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.astro" },
+
+  --
+  -- ui
+  { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.scrolling.vim-smoothie" },
+
+  --
+  -- code runner
+  { import = "astrocommunity.code-runner.overseer-nvim" },
+  {
+    "stevearc/overseer.nvim",
+    opts = {
+      strategy = {
+        "toggleterm",
+      },
+    },
+  },
 }
