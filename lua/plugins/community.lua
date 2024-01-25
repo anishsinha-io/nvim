@@ -56,6 +56,21 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.scrolling.vim-smoothie" },
   { import = "astrocommunity.utility.noice-nvim" },
+  {
+    "folke/noice.nvim",
+    opts = {
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
 
   --
   -- test
