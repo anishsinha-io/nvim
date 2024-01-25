@@ -48,6 +48,16 @@ return {
   -- ui
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.scrolling.vim-smoothie" },
+  { import = "astrocommunity.utility.noice-nvim" },
+
+  --
+  -- test
+  { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.test.nvim-coverage" },
+
+  --
+  -- project
+  { import = "astrocommunity.project.project-nvim" },
 
   --
   -- code runner
