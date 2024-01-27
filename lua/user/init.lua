@@ -58,10 +58,10 @@ return {
       ["<leader>ts"] = { "<cmd>TermSelect<cr>", desc = "Select a terminal session" },
       ["<leader>tr"] = { "<cmd>ToggleTermSetName<cr>", desc = "Rename a terminal session" },
       ["<leader>sr"] = { "<cmd>lua require'sniprun'.run()<cr>", desc = "Run a line of code" },
-      ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun window" },
+      ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun windows" },
     },
     v = {
-      ["<leader>sr"] = { "<cmd>lua require'sniprun.display'.run('v')<cr>", desc = "Close sniprun window" },
+      ["<leader>sr"] = { "<cmd>lua require'sniprun'.run('v')<cr>", desc = "Run block" },
     },
   },
 }
