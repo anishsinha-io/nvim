@@ -58,7 +58,11 @@ return {
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "folke/noice.nvim",
+
     opts = {
+      presets = {
+        lsp_doc_border = true, -- add a border to hover docs and signature help
+      },
       routes = {
         {
           filter = {
@@ -75,6 +79,11 @@ return {
       },
 
       views = {
+        -- popup = {
+        --   border = {
+        --     style = "single",
+        --   },
+        --        },
         -- cmdline_popup = {
         --   border = {
         --     -- style = "none",
