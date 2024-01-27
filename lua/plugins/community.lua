@@ -69,17 +69,26 @@ return {
           opts = { skip = true },
         },
       },
+
+      cmdline = {
+        view = "cmdline",
+      },
+
       views = {
-        cmdline_popup = {
-          border = {
-            style = "none",
-            padding = { 1, 1 },
-          },
-          filter_options = {},
-          win_options = {
-            winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
-          },
-        },
+        -- cmdline_popup = {
+        --   border = {
+        --     -- style = "none",
+        --     padding = { 0, 1 },
+        --   },
+        --   filter_options = {},
+        --   win_options = {
+        --     -- winhighlight = "NormalFloat:NormalFloat",
+        --     -- winhighlight = {
+        --     --   Normal = "NormalFloat",
+        --     --   FloatBorder = "NormalFloat",
+        --     -- },
+        --   },
+        -- },
       },
     },
   },

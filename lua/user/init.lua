@@ -3,6 +3,7 @@ require "user.plugins.themes"
 require "user.plugins.icons"
 require "user.plugins.neogen"
 require "user.plugins.conform"
+require "user.plugins.telescope-luasnip"
 
 return {
   colorscheme = "catppuccin-mocha",
@@ -24,7 +25,7 @@ return {
       -- local red = get_hlgroup("Error").fg
 
       local border_color = "#585b70"
-      local red = "#f38ba8"
+      -- local red = "#f38ba8"
       local mauve = "#cba6f7"
       local peach = "#fab387"
       local pink = "#f5c2e7"
@@ -37,7 +38,7 @@ return {
         TelescopePreviewTitle = { fg = bg, bg = peach },
         TelescopePromptBorder = { fg = border_color, bg = bg },
         TelescopePromptNormal = { fg = fg, bg = bg },
-        TelescopePromptPrefix = { fg = red, bg = bg },
+        TelescopePromptPrefix = { fg = pink, bg = bg },
         TelescopePromptTitle = { fg = bg, bg = mauve },
         TelescopeResultsBorder = { fg = border_color, bg = bg },
         TelescopeResultsNormal = { bg = bg },
@@ -52,6 +53,15 @@ return {
       ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
       ["<leader>o"] = { "<cmd>OverseerRun<cr>", desc = "Run task" },
       ["<leader>g"] = { "<cmd>lua require'neogen'.generate()<cr>", desc = "Create doc comment" },
+      ["<leader>fs"] = { "<cmd>lua require'telescope'.extensions.luasnip.luasnip{}<cr>", desc = "Search snippets" },
+      ["<leader>ta"] = { "<cmd>ToggleTermToggleAll<cr>", desc = "Toggle all terminal sessions" },
+      ["<leader>ts"] = { "<cmd>TermSelect<cr>", desc = "Select a terminal session" },
+      ["<leader>tr"] = { "<cmd>ToggleTermSetName<cr>", desc = "Rename a terminal session" },
+      ["<leader>sr"] = { "<cmd>lua require'sniprun'.run()<cr>", desc = "Run a line of code" },
+      ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun window" },
+    },
+    v = {
+      ["<leader>sr"] = { "<cmd>lua require'sniprun.display'.run('v')<cr>", desc = "Close sniprun window" },
     },
   },
 }

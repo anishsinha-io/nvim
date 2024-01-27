@@ -329,6 +329,11 @@ autocmd("ColorScheme", {
   end,
 })
 
+autocmd("VimEnter", {
+  desc = "Toggle relative line numbers off",
+  command = "set nornu",
+})
+
 autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
   desc = "AstroNvim user events for file detection (AstroFile and AstroGitFile)",
   group = augroup("file_user_events", { clear = true }),
