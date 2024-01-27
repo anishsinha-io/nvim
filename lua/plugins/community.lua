@@ -113,4 +113,8 @@ return {
       },
     },
   },
+
+  --
+  -- note taking
+  { import = "astrocommunity.note-taking.neorg" },
 }
