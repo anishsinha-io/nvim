@@ -4,6 +4,7 @@ require "user.plugins.icons"
 require "user.plugins.neogen"
 require "user.plugins.conform"
 require "user.plugins.telescope-luasnip"
+require "user.plugins.minimap"
 
 return {
   colorscheme = "catppuccin-mocha",
@@ -59,6 +60,7 @@ return {
       ["<leader>tr"] = { "<cmd>ToggleTermSetName<cr>", desc = "Rename a terminal session" },
       ["<leader>sr"] = { "<cmd>lua require'sniprun'.run()<cr>", desc = "Run a line of code" },
       ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun windows" },
+      ["<leader>M"] = { "<cmd>lua require'codewindow'.toggle_minimap()<cr>", desc = "Toggle minimap" },
     },
     v = {
       ["<leader>sr"] = { "<cmd>lua require'sniprun'.run('v')<cr>", desc = "Run block" },
