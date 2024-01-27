@@ -45,6 +45,12 @@ return {
           icon = "",
           name = "TOML",
         },
+        pro = {
+          icon = "",
+          color = "#d75f5f",
+          cterm_color = "167",
+          name = "Prolog",
+        },
       },
     },
   },
