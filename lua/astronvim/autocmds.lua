@@ -334,6 +334,15 @@ autocmd("VimEnter", {
   command = "set nornu",
 })
 
+-- autocmd({ "BufEnter", "BufRead" }, {
+--   pattern = { "*.astro" },
+--   desc = "Toggle typescript highlighting for astro files",
+--   callback = function()
+--     vim.filetype.register { astro = "astro" }
+--     vim.treesitter.language.register("tsx", "astro")
+--   end,
+-- })
+
 autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
   desc = "AstroNvim user events for file detection (AstroFile and AstroGitFile)",
   group = augroup("file_user_events", { clear = true }),

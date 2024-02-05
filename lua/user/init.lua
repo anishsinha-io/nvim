@@ -21,6 +21,7 @@ return {
     },
     config = {
       prolog_lsp = function()
+        local lsp = require "lspconfig"
         vim.filetype.add { extension = { pro = "prolog" } }
         return {
           cmd = {
@@ -32,10 +33,11 @@ return {
             "-t",
             "halt",
             "--",
-            "stdio",
+            " stdio",
           },
-          filetypes = { "prolog" },
-          root_dir = require("lspconfig.util").root_pattern "pack.pro",
+          filetypes = { "prolog", "pro" },
+
+          root_dir = lsp.util.root_pattern "pack.pro",
         }
       end,
       ocamllsp = function()

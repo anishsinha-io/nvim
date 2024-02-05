@@ -72,6 +72,13 @@ return {
           },
           opts = { skip = true },
         },
+        {
+          filter = {
+            event = "notify",
+            find = "No information available",
+          },
+          opts = { skip = true },
+        },
       },
 
       cmdline = {
@@ -80,9 +87,14 @@ return {
 
       views = {
         -- popup = {
-        --   border = {
-        --     style = "single",
-        --   },
+        border = {
+          style = "single",
+          -- win_options = {
+          --   winhighlight = {
+          --     Normal = "NoiceCmdlinePopup",
+          --   },
+          -- },
+        },
         --        },
         -- cmdline_popup = {
         --   border = {
