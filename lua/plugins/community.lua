@@ -19,7 +19,6 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.julia" },
   { import = "astrocommunity.pack.just" },
-  { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.prisma" },
@@ -76,6 +75,13 @@ return {
           filter = {
             event = "notify",
             find = "No information available",
+          },
+          opts = { skip = true },
+        },
+        {
+          filter = {
+            event = "notify",
+            find = "failed to install",
           },
           opts = { skip = true },
         },

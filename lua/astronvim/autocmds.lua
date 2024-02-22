@@ -39,6 +39,15 @@ autocmd("BufWritePre", {
   end,
 })
 
+-- FIXME: Make this work
+-- autocmd({ "VimEnter", "BufEnter", "BufRead" }, {
+--   desc = "Dismiss notifications on startup",
+--   callback = function()
+--     local notify = require "notify"
+--     notify.dismiss { silent = true, pending = true }
+--   end,
+-- })
+
 local terminal_settings_group = augroup("terminal_settings", { clear = true })
 -- TODO: drop when dropping support for Neovim v0.9
 if vim.fn.has "nvim-0.9" == 1 and vim.fn.has "nvim-0.9.4" == 0 then
@@ -360,6 +369,12 @@ autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
     end
   end,
 })
+
+-- autocmd("BufEnter", {
+--   pattern = { ".env", "*.env", "*.env.*", ".env.*" },
+--   group = vim.api.nvim_create_augroup("__env", { clear = true }),
+--   callback = function(args) vim.diagnostic.disable(args.buf) end,
+-- })
 
 cmd(
   "AstroChangelog",
