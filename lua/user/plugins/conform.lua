@@ -6,6 +6,7 @@ return {
         python = { "isort", "black" },
         sql = { "sql-formatter" },
         ocaml = { "ocamlformat" },
+        typescriptreact = { { "prettierd", "prettier" } },
 
         ["_"] = { "trim_whitespace" },
       },

@@ -7,7 +7,7 @@ return {
   -- lang
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.clojure" },
-  { import = "astrocommunity.pack.cmake" },
+  -- { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.docker" },
@@ -15,7 +15,7 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.helm" },
-  { import = "astrocommunity.pack.java" },
+  -- { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.julia" },
   { import = "astrocommunity.pack.just" },

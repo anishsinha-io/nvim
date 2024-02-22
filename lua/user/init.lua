@@ -1,25 +1,16 @@
-require "user.plugins.dotfiles"
-require "user.plugins.themes"
-require "user.plugins.icons"
-require "user.plugins.neogen"
-require "user.plugins.conform"
-require "user.plugins.telescope-luasnip"
-require "user.plugins.minimap"
-require "user.plugins.tmux"
-require "user.plugins.autotags"
-require "user.plugins.tailwind-rename"
+local dotfiles = require "user.plugins.dotfiles"
+local themes = require "user.plugins.themes"
+local icons = require "user.plugins.icons"
+local neogen = require "user.plugins.neogen"
+local conform = require "user.plugins.conform"
+local snippets = require "user.plugins.telescope-luasnip"
+local minimap = require "user.plugins.minimap"
+local tmux = require "user.plugins.tmux"
+local autotags = require "user.plugins.autotags"
 
-vim.filetype.add {
-  filename = {
-    zsh = "sh",
-    [".zshrc"] = "sh",
-    [".env.example"] = "sh",
-    -- "zsh" = "shell",
-    -- [".env"] = "dotenv",
-    -- ["env"] = "dotenv",
-    -- ["tsconfig.json"] = "jsonc",
-  },
-}
+local tailwind = require "user.plugins.tailwind-rename"
+
+local mappings = require "user.config.mappings"
 
 return {
   colorscheme = "catppuccin-mocha",
@@ -27,6 +18,29 @@ return {
     opt = {
       showtabline = 0,
     },
+  },
+
+  polish = function()
+    vim.filetype.add {
+      filename = {
+        zsh = "sh",
+        [".zshrc"] = "sh",
+        [".env.example"] = "sh",
+      },
+    }
+  end,
+
+  plugins = {
+    dotfiles,
+    themes,
+    icons,
+    neogen,
+    conform,
+    snippets,
+    minimap,
+    tmux,
+    autotags,
+    tailwind,
   },
 
   lsp = {
@@ -161,33 +175,5 @@ return {
     end,
   },
 
-  mappings = {
-    n = {
-      ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find todo comments" },
-      ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
-      ["<leader>o"] = { "<cmd>OverseerRun<cr>", desc = "Run task" },
-      ["<leader>g"] = { "<cmd>lua require'neogen'.generate()<cr>", desc = "Create doc comment" },
-      ["<leader>fs"] = { "<cmd>lua require'telescope'.extensions.luasnip.luasnip{}<cr>", desc = "Search snippets" },
-      ["<leader>ta"] = { "<cmd>ToggleTermToggleAll<cr>", desc = "Toggle all terminal sessions" },
-      ["<leader>ts"] = { "<cmd>TermSelect<cr>", desc = "Select a terminal session" },
-      ["<leader>tr"] = { "<cmd>ToggleTermSetName<cr>", desc = "Rename a terminal session" },
-      ["<leader>sr"] = { "<cmd>lua require'sniprun'.run()<cr>", desc = "Run a line of code" },
-      ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun windows" },
-      ["<leader>M"] = { "<cmd>lua require'codewindow'.toggle_minimap()<cr>", desc = "Toggle minimap" },
-      ["<leader>i"] = {
-        function()
-          if vim.bo.filetype == "neo-tree" then
-            vim.cmd.wincmd "p"
-          else
-            vim.cmd.Neotree "focus"
-          end
-        end,
-        desc = "Toggle Explorer Focus",
-      },
-      ["<C-h"] = { "<cmd>" },
-    },
-    v = {
-      ["<leader>sr"] = { "<cmd>lua require'sniprun'.run('v')<cr>", desc = "Run block" },
-    },
-  },
+  mappings = mappings,
 }
