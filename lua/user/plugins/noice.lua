@@ -22,16 +22,13 @@ return {
       },
       {
         filter = {
-          event = "warn",
-          find = "LSP Timeout",
+          event = "notify",
+          kind = "",
+          find = "timeout",
         },
         opts = { skip = true },
       },
     },
-
-    -- cmdline = {
-    --   view = "cmdline",
-    -- },
 
     views = {
       border = {

@@ -99,6 +99,11 @@ return {
       prolog_lsp = prolog_lsp,
       cssls = cssls,
     },
+    formatting = {
+      disabled = {
+        "lua_ls",
+      },
+    },
   },
 
   highlights = highlights,
