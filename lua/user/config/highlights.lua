@@ -40,9 +40,13 @@ return {
     -- get highlights from highlight groups
     local normal = get_hlgroup "Normal"
     local fg, bg = normal.fg, normal.bg
-    local bg_alt = get_hlgroup("Visual").bg
-    local green = get_hlgroup("String").fg
-    local red = get_hlgroup("Error").fg
+    -- local bg_alt = get_hlgroup("Visual").bg
+    local bg_alt = "#cba6f7"
+
+    -- local green = get_hlgroup("String").fg
+    -- local red = get_hlgroup("Error").fg
+    local red = "#f38ba8"
+    local green = "#a6e3a1"
     -- return a table of highlights for telescope based on colors gotten from highlight groups
     return {
       TelescopeBorder = { fg = bg_alt, bg = bg },
