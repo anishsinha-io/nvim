@@ -6,13 +6,13 @@ return function()
       [".env.example"] = "sh",
     },
   }
-  vim.api.nvim_create_autocmd({ "FocusGained" }, {
+  vim.api.nvim_create_autocmd({ "FocusGained", "VimEnter" }, {
     pattern = "*",
     command = "silent !tmux set status off",
   })
 
-  vim.api.nvim_create_autocmd({ "FocusLost" }, {
+  vim.api.nvim_create_autocmd({ "FocusLost", "VimLeave" }, {
     pattern = "*",
-    command = "silent !tmux set status",
+    command = "silent !tmux set status on",
   })
 end
