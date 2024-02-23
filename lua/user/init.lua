@@ -56,9 +56,11 @@ return {
       hl.git_removed = comment_fg
       hl.blank_bg = get_hlgroup("Folded").fg
       hl.file_info_bg = get_hlgroup("Visual").bg
-      hl.nav_icon_bg = get_hlgroup("String").fg
+      -- hl.nav_icon_bg = get_hlgroup("String").fg
+      hl.nav_icon_bg = "#a6e3a1"
       hl.nav_fg = hl.nav_icon_bg
       hl.folder_icon_bg = get_hlgroup("Error").fg
+      hl.folder_icon_bg = "#f38ba8"
       return hl
     end,
     attributes = {
