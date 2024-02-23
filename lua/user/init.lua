@@ -11,6 +11,7 @@ local noice = require "user.plugins.noice"
 local overseer = require "user.plugins.overseer"
 local tailwind = require "user.plugins.tailwind-rename"
 local heirline = require "user.plugins.heirline"
+local harpoon = require "user.plugins.harpoon"
 
 local mappings = require "user.config.mappings"
 local highlights = require "user.config.highlights"
@@ -86,6 +87,7 @@ return {
     noice,
     overseer,
     heirline,
+    harpoon,
   },
 
   lsp = {
