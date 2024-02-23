@@ -21,7 +21,6 @@ return {
       end,
       desc = "Toggle Explorer Focus",
     },
-    ["<C-h"] = { "<cmd>" },
   },
   v = {
     ["<leader>sr"] = { "<cmd>lua require'sniprun'.run('v')<cr>", desc = "Run block" },
