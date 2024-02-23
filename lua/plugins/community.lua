@@ -37,6 +37,7 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.zig" },
+
   --
   -- framework
   { import = "astrocommunity.pack.angular" },
@@ -50,75 +51,12 @@ return {
   --
   -- editing support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
   --
   -- ui
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.scrolling.vim-smoothie" },
   { import = "astrocommunity.utility.noice-nvim" },
-  {
-    "folke/noice.nvim",
-
-    opts = {
-      presets = {
-        lsp_doc_border = true, -- add a border to hover docs and signature help
-      },
-      routes = {
-        {
-          filter = {
-            event = "msg_show",
-            kind = "",
-            find = "written",
-          },
-          opts = { skip = true },
-        },
-        {
-          filter = {
-            event = "notify",
-            find = "No information available",
-          },
-          opts = { skip = true },
-        },
-        {
-          filter = {
-            event = "notify",
-            find = "failed to install",
-          },
-          opts = { skip = true },
-        },
-      },
-
-      cmdline = {
-        view = "cmdline",
-      },
-
-      views = {
-        -- popup = {
-        border = {
-          style = "single",
-          -- win_options = {
-          --   winhighlight = {
-          --     Normal = "NoiceCmdlinePopup",
-          --   },
-          -- },
-        },
-        --        },
-        -- cmdline_popup = {
-        --   border = {
-        --     -- style = "none",
-        --     padding = { 0, 1 },
-        --   },
-        --   filter_options = {},
-        --   win_options = {
-        --     -- winhighlight = "NormalFloat:NormalFloat",
-        --     -- winhighlight = {
-        --     --   Normal = "NormalFloat",
-        --     --   FloatBorder = "NormalFloat",
-        --     -- },
-        --   },
-        -- },
-      },
-    },
-  },
 
   --
   -- test
@@ -132,14 +70,6 @@ return {
   --
   -- code runner
   { import = "astrocommunity.code-runner.overseer-nvim" },
-  {
-    "stevearc/overseer.nvim",
-    opts = {
-      strategy = {
-        "toggleterm",
-      },
-    },
-  },
 
   --
   -- note taking

@@ -7,6 +7,8 @@ local snippets = require "user.plugins.telescope-luasnip"
 local minimap = require "user.plugins.minimap"
 local tmux = require "user.plugins.tmux"
 local autotags = require "user.plugins.autotags"
+local noice = require "user.plugins.noice"
+local overseer = require "user.plugins.overseer"
 
 local tailwind = require "user.plugins.tailwind-rename"
 
@@ -41,6 +43,8 @@ return {
     tmux,
     autotags,
     tailwind,
+    noice,
+    overseer,
   },
 
   lsp = {
