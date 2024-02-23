@@ -14,6 +14,7 @@ local heirline = require "user.plugins.heirline"
 
 local mappings = require "user.config.mappings"
 local highlights = require "user.config.highlights"
+local polish = require "user.config.polish"
 
 local ocamllsp = require "user.lsp.ocaml"
 local prolog_lsp = require "user.lsp.prolog"
@@ -69,15 +70,7 @@ return {
     },
   },
 
-  polish = function()
-    vim.filetype.add {
-      filename = {
-        zsh = "sh",
-        [".zshrc"] = "sh",
-        [".env.example"] = "sh",
-      },
-    }
-  end,
+  polish = polish,
 
   plugins = {
     dotfiles,

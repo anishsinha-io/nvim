@@ -20,6 +20,13 @@ return {
         },
         opts = { skip = true },
       },
+      {
+        filter = {
+          event = "warn",
+          find = "LSP Timeout",
+        },
+        opts = { skip = true },
+      },
     },
 
     -- cmdline = {
