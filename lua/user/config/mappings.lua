@@ -1,7 +1,12 @@
 return {
   n = {
+    ["<leader>C"] = { "<cmd>Legendary<cr>", desc = "Command palette" },
     ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find todo comments" },
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
+    ["<leader>ft"] = {
+      function() require("telescope.builtin").colorscheme { enable_preview = false } end,
+      desc = "Find themes",
+    },
     ["<leader>o"] = { "<cmd>OverseerRun<cr>", desc = "Run task" },
     ["<leader>g"] = { "<cmd>lua require'neogen'.generate()<cr>", desc = "Create doc comment" },
     ["<leader>fs"] = { "<cmd>lua require'telescope'.extensions.luasnip.luasnip{}<cr>", desc = "Search snippets" },
