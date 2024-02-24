@@ -13,6 +13,7 @@ local tailwind = require "user.plugins.tailwind-rename"
 local heirline = require "user.plugins.heirline"
 local harpoon = require "user.plugins.harpoon"
 local legendary = require "user.plugins.legendary"
+local haskell = require "user.plugins.haskell"
 
 local mappings = require "user.config.mappings"
 local highlights = require "user.config.highlights"
@@ -92,6 +93,7 @@ return {
     heirline,
     harpoon,
     legendary,
+    haskell,
   },
 
   lsp = {
