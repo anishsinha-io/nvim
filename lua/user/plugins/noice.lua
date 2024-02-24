@@ -13,18 +13,19 @@ return {
         },
         opts = { skip = true },
       },
+
       {
         filter = {
-          event = "notify",
-          find = "No information available",
+          event = "msg_show",
+          kind = "",
+          find = "~",
         },
         opts = { skip = true },
       },
       {
         filter = {
           event = "notify",
-          kind = "",
-          find = "timeout",
+          find = "No information available",
         },
         opts = { skip = true },
       },
