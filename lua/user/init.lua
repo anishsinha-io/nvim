@@ -14,6 +14,8 @@ local heirline = require "user.plugins.heirline"
 local harpoon = require "user.plugins.harpoon"
 local legendary = require "user.plugins.legendary"
 local haskell = require "user.plugins.haskell"
+local neorg = require "user.plugins.neorg"
+local zenmode = require "user.plugins.zenmode"
 
 local mappings = require "user.config.mappings"
 local highlights = require "user.config.highlights"
@@ -94,6 +96,8 @@ return {
     harpoon,
     legendary,
     haskell,
+    neorg,
+    zenmode,
   },
 
   lsp = {

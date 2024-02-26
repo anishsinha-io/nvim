@@ -16,6 +16,7 @@ return {
     ["<leader>sr"] = { "<cmd>lua require'sniprun'.run()<cr>", desc = "Run a line of code" },
     ["<leader>sc"] = { "<cmd>lua require'sniprun.display'.close_all()<cr>", desc = "Close sniprun windows" },
     ["<leader>M"] = { "<cmd>lua require'codewindow'.toggle_minimap()<cr>", desc = "Toggle minimap" },
+    ["<leader>z"] = { "<cmd>lua require'zen-mode'.toggle{}<cr>", desc = "Zen mode" },
     ["<leader>i"] = {
       function()
         if vim.bo.filetype == "neo-tree" then
