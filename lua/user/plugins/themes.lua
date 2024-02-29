@@ -7,6 +7,8 @@ local one_monokai = require "user.plugins.themes.one_monokai"
 local spacemacs = require "user.plugins.themes.spacemacs"
 local poimandres = require "user.plugins.themes.poimandres"
 local noctis = require "user.plugins.themes.noctis"
+local flexoki = require "user.plugins.themes.flexoki"
+local onedark = require "user.plugins.themes.onedark"
 
 return {
   tokyonight,
@@ -18,4 +20,6 @@ return {
   spacemacs,
   poimandres,
   noctis,
+  flexoki,
+  onedark,
 }

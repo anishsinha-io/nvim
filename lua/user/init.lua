@@ -26,7 +26,7 @@ local prolog_lsp = require "user.lsp.prolog"
 local cssls = require "user.lsp.css"
 
 return {
-  colorscheme = "catppuccin-mocha",
+  colorscheme = "tokyonight-moon",
   options = {
     opt = {
       showtabline = 0,

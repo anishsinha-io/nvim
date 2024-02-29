@@ -7,6 +7,7 @@ return {
         sql = { "sql-formatter" },
         ocaml = { "ocamlformat" },
         typescriptreact = { { "prettierd", "prettier" } },
+        rust = { "rustfmt --edition=2021" },
 
         ["_"] = { "trim_whitespace" },
       },
