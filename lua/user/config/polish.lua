@@ -34,6 +34,8 @@ return function()
     },
   }
 
+  vim.opt.guicursor = vim.opt.guicursor + "i:hor20-Cursor/lCursor"
+
   vim.api.nvim_create_autocmd({ "FocusGained", "VimEnter" }, {
     pattern = "*",
     command = "silent !tmux set status off",

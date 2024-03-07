@@ -51,6 +51,12 @@ return {
           cterm_color = "167",
           name = "Prolog",
         },
+        m4a = {
+          icon = "",
+          color = "#c0c0c0",
+          cterm_color = "7",
+          name = "m4a",
+        },
       },
     },
   },

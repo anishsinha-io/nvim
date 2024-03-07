@@ -25,8 +25,10 @@ local ocamllsp = require "user.lsp.ocaml"
 local prolog_lsp = require "user.lsp.prolog"
 local cssls = require "user.lsp.css"
 
+local extras = require "user.plugins.extras"
+
 return {
-  colorscheme = "tokyonight-moon",
+  colorscheme = "catppuccin-mocha",
   options = {
     opt = {
       showtabline = 0,
@@ -98,6 +100,7 @@ return {
     haskell,
     neorg,
     zenmode,
+    extras,
   },
 
   lsp = {
