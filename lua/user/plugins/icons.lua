@@ -29,6 +29,9 @@ return {
           cterm_color = "180",
           name = "DuneProject",
         },
+        ["go.mod"] = {
+          icon = "󰟓",
+        },
         dune = {
           icon = "",
           name = "Dune",

@@ -55,4 +55,9 @@ return function()
     pattern = { "*.hs" },
     command = "silent! !fourmolu -i % &> /dev/null",
   })
+
+  vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*.tsx",
+    command = "silent !rustywind --write .",
+  })
 end

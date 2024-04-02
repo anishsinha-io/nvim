@@ -9,7 +9,6 @@ local tmux = require "user.plugins.tmux"
 local autotags = require "user.plugins.autotags"
 local noice = require "user.plugins.noice"
 local overseer = require "user.plugins.overseer"
-local tailwind = require "user.plugins.tailwind-rename"
 local heirline = require "user.plugins.heirline"
 local harpoon = require "user.plugins.harpoon"
 local legendary = require "user.plugins.legendary"
@@ -91,7 +90,6 @@ return {
     minimap,
     tmux,
     autotags,
-    tailwind,
     noice,
     overseer,
     heirline,
@@ -101,6 +99,7 @@ return {
     neorg,
     zenmode,
     extras,
+    -- lsplens,
   },
 
   lsp = {
